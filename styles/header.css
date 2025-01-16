@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  align-items: center;
+
+  & h1 {
+    font: 800 1.5rem/1.3 var(--ff-sora);
+    text-transform: uppercase;
+    color: white;
+    margin-left: .6875rem;
+  }
+}

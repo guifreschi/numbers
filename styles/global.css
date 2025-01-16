@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-sora: "Sora", sans-serif;
+  --ff-roboto-mono: "Roboto Mono", sans-serif;
+  --ff-roboto-flex: "Roboto Flex", sans-serif;
+
+  --content-primary: white;
+  --content-secondary: #C7C9CC;
+  --content-tertiary: #D9D9D9;
+  --content-brand: #C58DE7;
+  --color-inverse: #030203;
+
+  --bg-primary: #020202;
+  --bg-secondary: #111012;
+  --bg-tertiary: #24222E;
+  --bg-brand: #C58DE7;
+  --bg-gray: #3D3D3D;
+
+  --accent-pink: #D586E0;
+  --accent-blue: #91A1FA;
+  --accent-green: #77C0A0;
+  --accent-lime: #D1DC97;
+  --accent-red: #E9A9B3;
+}
+
+body {
+  background-color: var(--bg-primary);
+  background-image: 
+    linear-gradient(to bottom, var(--bg-primary) 40%, rgba(255, 255, 255, 0) 100%),
+    url(/assets/main-images/bg-img.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; 
+}
+
+
+.container {
+  margin: 4.5rem 7.5rem;
+}
