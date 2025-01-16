@@ -5,6 +5,7 @@
   "a b"
   "a b"
   ;
+  gap: 6.75rem;
 
   & #infos {
     grid-area: a;
@@ -47,6 +48,105 @@
         & .question-text {
           margin-left: .5rem;
         }
+      }
+    }
+  }
+
+  & #draw {
+    margin-block: 2.125rem;
+    grid-area: b;
+    display: flex;
+    flex-direction: column;
+    width: 30.125rem;
+
+    & #title-form {
+      & p:nth-of-type(1) {
+        color: white;
+        font: 700 1.25rem/1.5 var(--ff-roboto-flex);
+        text-transform: uppercase;
+      }
+
+      & p:nth-of-type(2) {
+        font: 400 1rem/1.5 var(--ff-roboto-flex);
+      }
+    }
+
+    & #form {
+      & form {
+        display: flex;
+        margin-top: 2.5rem;
+
+        & label {
+          text-transform: uppercase;
+          color: var(--content-secondary);
+          font: 700 1rem/1.5 var(--ff-roboto-flex);
+          text-transform: uppercase;
+          display: inline-block;
+        }
+
+        & input {
+          all: unset;
+          background-color: var(--bg-secondary);
+          width: 5.375rem;
+          height: 3.5rem;
+          margin-top: .5rem;
+          text-align: center;
+          color: white;
+          font: 700 2rem/1.5 var(--ff-sora);
+          border-radius: 6px;
+        }
+
+        & .number-field {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: .75rem;
+        }
+      }
+
+      & #repeat-num {
+        display: flex;
+        align-items: center;
+        margin-top: 1.3125rem;
+
+        & .repeat-body {
+          cursor: pointer;
+          display: flex;
+          width: 1.875rem;
+          height: 1.25rem;
+          border-radius: 1rem;
+          background-image: linear-gradient(to right, #D586E0 0%, #91A1FA 98.93%);
+          align-items: center;
+          & #circle-repeat {
+            width: .875rem;
+            height: .875rem;
+            background-color: white;
+            border-radius: 50%;
+            margin: 3px;
+          }
+        }
+
+        & p {
+          margin-left: .5rem;
+          color: white;
+          font: 400 .75rem/1.5 var(--ff-roboto-flex);
+        }
+      }
+
+      & button {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: var(--bg-tertiary);
+        text-transform: uppercase;
+        font: 700 1rem/1.5 var(--ff-roboto-flex);
+        padding-block: 1rem;
+        cursor: pointer;
+        margin-top: 2.5rem;
+        gap: .5rem;
+        border-radius: .5rem;
       }
     }
   }
