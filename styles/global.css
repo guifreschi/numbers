@@ -39,8 +39,8 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden; 
+  color: var(--content-secondary);
 }
-
 
 .container {
   margin: 4.5rem 7.5rem;
