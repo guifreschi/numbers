@@ -9,3 +9,9 @@ header {
     margin-left: .6875rem;
   }
 }
+
+@media (max-width: 79.8em) {
+  header {
+    justify-content: center;
+  }
+} 

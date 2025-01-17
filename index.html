@@ -20,36 +20,36 @@
       <div id="infos">
         <p>Online - gratuito</p>
         <h3>Sorteador de números</h3>
-
-        <div id="questions">
-
-          <div class="question">
-            <div class="question-image">
-              <img src="assets/person-talking.svg" alt="">
-            </div>
-            <div class="question-text">
-              <p>Como funciona o sorteador de números?</p>
-              <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
-            </div>
-          </div>
-
-          <div class="question">
-            <div class="question-image">
-              <img src="assets/person-talking.svg" alt="">
-            </div>
-            <div class="question-text">
-              <p>Posso escolher o intervalo dos números?</p>
-              <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
-            </div>
-          </div>
-
-        </div>
       </div>
+      
+      <div id="questions">
 
+        <div class="question">
+          <div class="question-image">
+            <img src="assets/person-talking.svg" alt="">
+          </div>
+          <div class="question-text">
+            <p>Como funciona o sorteador de números?</p>
+            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="question-image">
+            <img src="assets/person-talking.svg" alt="">
+          </div>
+          <div class="question-text">
+            <p>Posso escolher o intervalo dos números?</p>
+            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+          </div>
+        </div>
+
+      </div>
       <div id="draw">
         <div id="title-form">
           <p>Quero sortear:</p>
-          <p>defina o intervalo e a quantidade de números, clique em "Sortear" <br> e veja os resultados na tela. É rápido e fácil!</p>
+          <p class="desktop-only">defina o intervalo e a quantidade de números, clique em "Sortear" <br> e veja os resultados na tela. É rápido e fácil!</p>
+          <p class="mobile-only">defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. <br> É rápido e fácil!</p>
         </div>
 
         <div id="form">
@@ -73,7 +73,7 @@
 
           <div id="repeat-num">
             <div class="repeat-body">
-              <div id="circle-repeat">
+              <div class="circle-animation" id="circle-repeat">
               </div>
             </div>
             <p>Não repetir número</p>
@@ -84,5 +84,6 @@
       </div>
     </section>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

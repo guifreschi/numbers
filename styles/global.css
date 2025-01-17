@@ -54,3 +54,30 @@ input[type="number"] {
   max-width: 1200px; /* Limita a largura máxima para evitar que o conteúdo fique muito largo */
   height: auto; /* Altura ajustável conforme o conteúdo */
 }
+
+.gray-filter {
+  filter: grayscale();
+}
+
+@media (max-width: 79.8em) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: flex;
+  }
+  .centralize {
+    margin: initial; 
+    width: inherit; 
+    max-width: initial; 
+    height: initial; 
+  }
+  .container {
+    margin: 2.75rem auto;
+    width: 20rem; /* ou um valor específico como 1200px */
+  }
+}
+
+.display-none {
+  display: none;
+}

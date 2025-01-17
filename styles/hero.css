@@ -3,9 +3,9 @@
   display: grid;
   grid-template-areas: 
   "a b"
-  "a b"
+  "c b"
   ;
-  gap: 6.75rem;
+  gap: 0 6.75rem;
 
   & #infos {
     grid-area: a;
@@ -26,28 +26,30 @@
       color: white;
       max-width: 32rem;
     }
+  }
 
-    & #questions {
-      .question {
-        margin-top: 1.6875rem;
-        max-width: 24.125rem;
-        display: flex;
+  & #questions {
+    grid-area: c;
+    margin-inline: .875rem;
+    .question {
+      margin-top: 1.6875rem;
+      max-width: 24.125rem;
+      display: flex;
 
-        & p:nth-of-type(1) {
-          color: var(--content-brand);
-          text-transform: none;
-          font: 400 .875rem/1.5 var(--ff-roboto-flex);
-        }
+      & p:nth-of-type(1) {
+        color: var(--content-brand);
+        text-transform: none;
+        font: 400 .875rem/1.5 var(--ff-roboto-flex);
+      }
 
-        & p:nth-of-type(2) {
-          color: var(--content-secondary);
-          text-transform: none;
-          font: 400 .75rem/1.5 var(--ff-roboto-flex);
-        }
+      & p:nth-of-type(2) {
+        color: var(--content-secondary);
+        text-transform: none;
+        font: 400 .75rem/1.5 var(--ff-roboto-flex);
+      }
 
-        & .question-text {
-          margin-left: .5rem;
-        }
+      & .question-text {
+        margin-left: .5rem;
       }
     }
   }
@@ -86,15 +88,22 @@
 
         & input {
           all: unset;
-          background-color: var(--bg-secondary);
+          background-color: var(--bg-secondary); 
           width: 5.375rem;
           height: 3.5rem;
           margin-top: .5rem;
           text-align: center;
           color: white;
           font: 700 2rem/1.5 var(--ff-sora);
-          border-radius: 6px;
+          border-radius: .5rem;
+          transition: .2s;
+        
+          &:hover,
+          &:focus {
+            background-color: var(--bg-tertiary);
+          }
         }
+                      
 
         & .number-field {
           display: flex;
@@ -123,6 +132,11 @@
             background-color: white;
             border-radius: 50%;
             margin: 3px;
+            transition: 0.3s ease;
+            
+            &.circle-animation {
+              margin-left: auto;
+            }
           }
         }
 
@@ -146,8 +160,55 @@
         cursor: pointer;
         margin-top: 2.5rem;
         gap: .5rem;
+        border: 3px solid transparent;
         border-radius: .5rem;
+        transition: .1s;
+
+        &:hover {
+          border: 3px solid var(--bg-tertiary);
+          background-color: var(--bg-primary);
+        }
       }
     }
+  }
+}
+
+@media (max-width: 79.8em) {
+  #hero {
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    ;
+    display: grid;
+    flex-direction: column;
+    margin-top: 2.875rem;
+    gap: 0;
+
+    & #infos {
+      grid-area: a;
+      margin-inline: 0;
+      & h3 {
+        font: 800 2.5rem/1.3 var(--ff-sora);
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+    
+    & #questions {
+      grid-area: c;
+      margin-top: 5rem;
+      margin-inline: 0;
+    }
+
+    & #draw {
+      grid-area: b;
+      max-width: 20rem;
+      margin-block: 0;
+      margin-top: 2.625rem;
+      & #form {
+        flex-direction: column;
+      }
+    } 
   }
 }
