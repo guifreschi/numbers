@@ -46,14 +46,13 @@
 
       </div>
       <div id="draw">
-        <div id="title-form">
+        <div class="display-none" id="title-form">
           <p>Quero sortear:</p>
-          <p class="desktop-only">defina o intervalo e a quantidade de números, clique em "Sortear" <br> e veja os resultados na tela. É rápido e fácil!</p>
-          <p class="mobile-only">defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. <br> É rápido e fácil!</p>
+          <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
         </div>
 
-        <div id="form">
-          <form action="">
+        <div class="display-none" id="form">
+          <form>
             <div class="number-field">
               <label for="numbers">Números</label>
               <input type="number" name="numbers" id="numbers">
@@ -78,9 +77,19 @@
             </div>
             <p>Não repetir número</p>
           </div>
-
-          <button>Sortear <img src="assets/arrow.svg" alt="Sortear"></button>
         </div>
+
+        <section id="result">
+          <p>Resultado do sorteio</p>
+          <p>1º Resultado</p>
+  
+          <div class="result-nums">
+            <p>23</p>
+            <p>12</p>
+          </div>
+        </section>
+
+        <button>Sortear <img src="assets/arrow.svg" alt="Sortear"></button>
       </div>
     </section>
   </div>
