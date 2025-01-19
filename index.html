@@ -46,26 +46,26 @@
 
       </div>
       <div id="draw">
-        <div class="display-none" id="title-form">
+        <div id="title-form">
           <p>Quero sortear:</p>
           <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
         </div>
 
-        <div class="display-none" id="form">
+        <div id="form">
           <form>
             <div class="number-field">
               <label for="numbers">Números</label>
-              <input type="number" name="numbers" id="numbers">
+              <input required type="number" name="numbers" id="numbers" required>
             </div>
   
             <div class="number-field">
               <label for="from">DE</label>
-              <input type="number" name="from" id="from">
+              <input type="number" name="from" id="from" required>
             </div>
   
             <div class="number-field">
               <label for="to">ATÉ</label>
-              <input type="number" name="to" id="to">
+              <input type="number" name="to" id="to" required>
             </div>
   
           </form>
@@ -79,13 +79,11 @@
           </div>
         </div>
 
-        <section id="result">
+        <section id="result" class="display-none">
           <p>Resultado do sorteio</p>
-          <p>1º Resultado</p>
+          <p id="result-paragraph">1º Resultado</p>
   
           <div class="result-nums">
-            <p>23</p>
-            <p>12</p>
           </div>
         </section>
 
