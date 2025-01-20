@@ -2,6 +2,7 @@ const repeatButton = document.querySelector(".repeat-body")
 const numbers = document.getElementById('numbers')
 const from = document.getElementById('from')
 const to = document.getElementById('to')
+const playAgain = document.getElementById('play-again')
 
 repeatButton.onclick = () => {
   const circle = document.getElementById("circle-repeat")
@@ -19,6 +20,7 @@ function showResult() {
 
   drawButton.onclick = (e) => {
     e.preventDefault()
+
     resultNums.innerHTML = ""
     let noRepeat = true
 
@@ -28,6 +30,9 @@ function showResult() {
 
     if (numbers.value == 0) {
       alert("Preencha os dados corretamente!")
+      return
+    } else if (from.value > to.value) {
+      alert("Dados inválidos!")
       return
     }
   
@@ -48,7 +53,21 @@ function showResult() {
     const resultParagraph = document.getElementById('result-paragraph')
     resultParagraph.textContent = `${draws}º Resultado`
 
-    drawButton.innerHTML = 'Sortear novamente <img src="assets/play.svg" alt="Sortear novamente">'
+    playAgain.style.display = 'flex'
+    drawButton.style.display = 'none'
+  }
+
+  playAgain.onclick = (e) => {
+    e.preventDefault()
+    numbers.value = ""
+    from.value = ""
+    to.value = ""
+
+    resultBody.classList.add('display-none')
+    titleForm.classList.remove('display-none')
+    form.classList.remove('display-none')
+    drawButton.style.display = 'flex'
+    playAgain.style.display = 'none'
   }
 
 }
