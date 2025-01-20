@@ -1,4 +1,7 @@
 const repeatButton = document.querySelector(".repeat-body")
+const numbers = document.getElementById('numbers')
+const from = document.getElementById('from')
+const to = document.getElementById('to')
 
 repeatButton.onclick = () => {
   const circle = document.getElementById("circle-repeat")
@@ -17,19 +20,20 @@ function showResult() {
   drawButton.onclick = (e) => {
     e.preventDefault()
     resultNums.innerHTML = ""
-    const numbers = document.getElementById('numbers')
-    const from = document.getElementById('from')
-    const to = document.getElementById('to')
     let noRepeat = true
 
     if (repeatButton.classList.contains("gray-filter")) {
       noRepeat = false;
     }  
+
+    if (numbers.value == 0) {
+      alert("Preencha os dados corretamente!")
+      return
+    }
   
     const drawResult  = draw(Number(numbers.value), Number(from.value), Number(to.value), noRepeat)
 
     for (let i = 0; i < drawResult.length; i++) {
-      console.log("p")
       const paragraph = document.createElement('p')
       paragraph.textContent = drawResult[i]
       resultNums.appendChild(paragraph)
@@ -48,8 +52,6 @@ function showResult() {
   }
 
 }
-
-showResult()
 
 function draw(num, from, to, noRepeat) {
   let resultsList = []
@@ -70,3 +72,26 @@ function draw(num, from, to, noRepeat) {
 
   return resultsList
 }
+
+function inputControl() {
+  const regex = /^[0-9]+$/
+
+  function validateInput(input, min, max) {
+    input.addEventListener("input", () => {
+      if (!regex.test(input.value)) {
+        input.value = input.value.replace(/\D/g, '')
+      } else if (input.value < min) {
+        input.value = min
+      } else if (input.value > max) {
+        input.value = max
+      }
+    })
+  }
+
+  validateInput(numbers, 1, 5)
+  validateInput(from, 0, 9999)
+  validateInput(to, 0, 9999)
+}
+
+inputControl()
+showResult()
