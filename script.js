@@ -31,7 +31,11 @@ function showResult() {
     if (numbers.value == 0) {
       alert("Preencha os dados corretamente!")
       return
-    } else if (from.value > to.value) {
+    } else if (Number(from.value) > Number(to.value)) {
+      console.log(from.value, to.value)
+      alert("Dados inválidos!")
+      return
+    } else if ((Number(to.value) - Number(from.value) + 1) < Number(numbers.value)) {
       alert("Dados inválidos!")
       return
     }
